@@ -1,4 +1,9 @@
+plugins {
+    id "org.sonarqube" version "5.0.0.4638"
+}
+
 apply plugin: 'java'
+
 
 dependencies {
     //added annotations used by JmeSurfaceView.
@@ -11,4 +16,11 @@ dependencies {
 compileJava {
     // The Android-Native Project requires the jni headers to be generated, so we do that here
     options.compilerArgs += ["-h", "${project.rootDir}/jme3-android-native/src/native/headers"]
+}
+
+task wrapper(type: Wrapper){
+    gradleVersion = '8.8'
+}
+task prepareKotlinBuildScriptModel {
+
 }
