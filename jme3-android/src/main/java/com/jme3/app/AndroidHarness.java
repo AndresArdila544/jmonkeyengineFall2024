@@ -172,7 +172,7 @@ public class AndroidHarness extends Activity implements TouchListener, DialogInt
     protected boolean isGLThreadPaused = true;
     protected ImageView splashImageView = null;
     protected FrameLayout frameLayout = null;
-    private final String ESCAPE_EVENT = "TouchEscape";
+    private final String escapeEvent = "TouchEscape";
     private boolean firstDrawFrame = true;
     private boolean inConfigChange = false;
 
